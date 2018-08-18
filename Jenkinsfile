@@ -20,6 +20,6 @@ node {
 	
 	stage('pipelinesyntax'){
 		sshagent(['war']){ 
-   sh 'scp-o StrictHostKeyChecking=no target/*.war ec2-user@18.191.29.247:/opt/apache-tomcat-8.0.53/webapps'
+   sh 'scp -o StrictHostKeyChecking=no target/*.war ec2-user@18.191.29.247:/opt/apache-tomcat-8.0.53/webapps'
 		}}
 }
